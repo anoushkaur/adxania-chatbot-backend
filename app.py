@@ -2,9 +2,7 @@ from flask import Flask, request, jsonify
 from flask_cors import CORS
 
 app = Flask(__name__)
-
-# Allow GitHub Pages frontend
-CORS(app, origins=["https://anoushkaur.github.io"])
+CORS(app, origins="https://anoushkaur.github.io")
 
 @app.route('/chat', methods=['POST'])
 def chat():
